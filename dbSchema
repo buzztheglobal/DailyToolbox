@@ -1,0 +1,51 @@
+now for phase 1.2:
+
+use refer above google document structure, and list down detailed step by step instruction
+suggest Postgres table structure to be setup to create sidebar menu based on Material-UI and Bootstrap 5.3, as per the need of the SPA, consider adding columns to tables as per the need for Google SEO, and GEO, and for analytical purposes.
+
+isTrending - column - indicates if a category is getting utilized across users
+isActive: is getting used if particular cartegory or tools is to be made visible or not.
+isPromoted: to be used if a particular tools is getting sponsored or to be prioritized
+toolDomain - column - indicates what domain does this tool/convertor belongs to
+
+postgres table - tblCategory [Primary]
+
+1. catID
+2. categoryName
+3. isActive
+4. isTrending
+
+create a postgres table - tblToolName [Secondary]
+
+1. subcatID
+2. ToolConverterName
+3. catID [FK - tblCategory]
+4. toolDomain
+5. isActive
+6. isTrending
+7. isPromoted
+
+create a pl sql script that would 
+1. drop TABLE tbl_menu_items
+2. create table tbl_menu_items
+
+CREATE TABLE tbl_menu_items (
+    item_id SERIAL PRIMARY KEY,
+    parent_id INTEGER REFERENCES tbl_menu_items(item_id),
+    item_name VARCHAR(100) NOT NULL,
+    item_type VARCHAR(50) NOT NULL CHECK (item_type IN ('category', 'tool', 'link')),
+    route_path VARCHAR(255),
+    icon_name VARCHAR(100),
+    is_active BOOLEAN DEFAULT true,
+    is_trending BOOLEAN DEFAULT false,
+    is_promoted BOOLEAN DEFAULT false,
+    tool_domain VARCHAR(100),
+    seo_title VARCHAR(70),
+    seo_meta_description VARCHAR(160),
+    geo_target JSONB,
+    click_count BIGINT DEFAULT 0,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+3. insert records based on the attached excel sheet with values on excel book - Tools List as per the table structure tbl_menu_items

@@ -1,0 +1,24 @@
+Refer attached sheet (online Tools - GNatt chart), create a single page application - named as a DailyToolbox, (Python and Django, refer Techstack given below), for now create SPA [DailyToolbox] only for phase 1, share detailed step by step instruction on how to setup windows dev environment, include code to create a sample backend API, and for front end using React.js, bootstrap 5.3, Material2 
+
+refer doc [https://docs.google.com/document/d/13DZo5oaJZsA0Zp8nZ5EcxoviC6xB0f_9eeDnwKj4Tvk/edit?usp=sharing] on how the detailed step by step instruction would look like.
+
+DailyToolbox - Phase 1 [Dev Env - setup]
+
+TechStack:
+React.js, node-Node.js v20.19.2, bootstrap 5.3 , Material2/Material-UI
+Django version - 5.2.2, Python version 3.13.3 , Django REST Framework 3.16.0
+PostgreSQL
+Hostinger (VPS)
+Firebase Authm Firebase Firestore, 
+OpenAI API / LangChain / Vertex AI / Hugging Face Transformers / Google Gemini
+Shopify Embedded SDK / API
+Google Analytics,  Google GEO,
+Django SEO Framework, Schema.org ,
+Elasticsearch, Django PWA, Gunicorn + Nginx, Git/GitHub
+
+suggest resolution, installed version are React.js, node-Node.js v20.19.2, bootstrap 5.3 , Material2/Material-UI
+Django version - 5.2.2, Python version 3.13.3 , Django REST Framework 3.16.0
+
+now for phase 1.1:
+use refer above document structure, and list down detailed step by step instruction to 
+Set up Firebase Authentication: Integrate Firebase for user sign-up, login, and session management with DailyToolbox
